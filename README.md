@@ -23,4 +23,4 @@ You can change the design and appearance of Tryon as per your website looks. It'
 - [ ] Add a logo so we can grow community
 - [ ] Make easily integrateable like any jquery plugin.
 - [ ] Remove junk files & data.
-- [ ] Make analytics working so people could know what frame has highest hits.
+- [ ] Make analytics working so people could know which frame has highest hits.
