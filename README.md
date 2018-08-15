@@ -6,4 +6,4 @@ This Try on solution has server so many Eyeglasses Stratup and companies around 
 You can change the design and appearance of Tryon as per your website looks. It's also mobile and tablets ready. This script can help your customers clients to save so much money on rejections of glasses by providing them Try before by buy solution.
 
 
-## Moving to Gulp
+![Auto Eye detection](https://raw.githubusercontent.com/post2seth/Virtual-tryon/master/showcase/eyedetection.jpg)
