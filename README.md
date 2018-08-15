@@ -8,9 +8,16 @@ You can change the design and appearance of Tryon as per your website looks. It'
 ### Automatically detects eyes and put the frame
 ![Auto Eye detection](https://raw.githubusercontent.com/post2seth/Virtual-tryon/master/showcase/eyedetection.jpg)
 
-
 ### Easily customizable 
 ![Customization options](https://raw.githubusercontent.com/post2seth/Virtual-tryon/master/showcase/customize.png)
 
 ### Works on Mobile devices as well
 ![Works with mobile](https://raw.githubusercontent.com/post2seth/Virtual-tryon/master/showcase/mobileready.png)
+
+
+## Tasks List
+
+- [ ] Change the structure, add webpack to complie JS files 
+- [ ] Add PD measurement & frame fitting algorithm
+- [ ] Remove License Screen, previously added when it was a paid software.
+- [ ] Add a logo so we can grow community
