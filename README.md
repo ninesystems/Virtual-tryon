@@ -24,3 +24,19 @@ You can change the design and appearance of Tryon as per your website looks. It'
 - [ ] Make easily integrateable like any jquery plugin.
 - [x] Remove junk files & data.
 - [ ] Make analytics working so people could know which frame has highest hits.
+
+
+### How to Build
+
+Run the "build.bat" file it will compose all the code files & will make a fresh "Build" folder.
+All the newly developed code is in Build folder.
+
+### how to try
+Open the Build folder & run the index.html file in browser.
+
+### Problems & Solutions
+if your build in not running as you want, please feel free to open an issue. i will try to respond you ASAP.
+
+### Marketing & Help
+If possible please help me to promote this virtual tryon, I am continously working with development from now. i would be happy if you join my hand to promote this so maximum people can take benefit of this piece of code without paying a single panny.
+
