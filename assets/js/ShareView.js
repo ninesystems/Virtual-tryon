@@ -137,9 +137,8 @@ var ShareView = function(){
 		window.open(fbUrl, "_blank");
       };
 	function shareToTwitter(imgurl) {
-		var encodedurl=encodeURIComponent(settings.shareURL+"?title="+settings.shareTitle+"& desc="+settings.shareDescription+" & image="+imgurl);
-		var twUrl='https://twitter.com/intent/tweet?text='+settings.shareTitle+'&url=http://demo.thesoftsol.com/tryon.html&hashtags='+settings.twitterHashtag;
-      	window.open(twUrl, "_blank");
+		// we have to remove the twitter sharing functionality
+		return false;
      };
 	// auto intiate //
 	this.initPlugin();

@@ -12,12 +12,6 @@ cls
 :: Starting up the fresh build..
 echo Build Started...
 echo ----------------------------------------------------------------------------
-echo Copying fonts
-@echo off
-xcopy .\assets\fonts .\Build\assets\fonts\ /s /e /h /q
-if errorlevel 4 goto lowmemory 
-if errorlevel 2 goto abort
-echo ----------------------------------------------------------------------------
 echo Copying images
 @echo off
 xcopy .\assets\images .\Build\assets\images\ /s /e /h /q
@@ -44,7 +38,6 @@ echo Copying HTML
 copy .\index.html .\Build\index.html
 copy .\save.php .\Build\save.php
 copy .\share.php .\Build\share.php
-copy .\license.txt .\Build\license.txt
 echo ----------------------------------------------------------------------------
 
 echo Copying Settings

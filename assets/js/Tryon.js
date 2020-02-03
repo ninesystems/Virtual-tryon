@@ -9,7 +9,6 @@ var Tryon = function (){
 	// var tryonpreview =null;
 	Tryon.prototype.initApp = function(elem,bar){
 		setupLayout(elem,bar);
-		var alter=new Alternater(elem);
 	};
 
 	function setupLayout(elem,bar) {
@@ -54,11 +53,11 @@ var Tryon = function (){
 	*	Destroy a All Tryon..
 	**/
 	Tryon.prototype.destroyAll = function() {
-		var elements = jsDom.nodeByClass("softsol-tryon");
+		var elements = jsDom.nodeByClass("tryon");
 		for (var i = elements.length - 1; i >= 0; i--) {
 			elements[i].innerHTML = "";
 		}
-		var barElement=jsDom.nodeByClass("softsol-tryon-bar");
+		var barElement=jsDom.nodeByClass("tryon-bar");
 		for (var i = barElement.length - 1; i >= 0; i--) {
 			barElement[i].innerHTML = "";
 		}

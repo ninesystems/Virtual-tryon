@@ -73,7 +73,7 @@ var settings_tryon = {
             shareTitle:"My Look With TRY ON",
             shareDescription:"",
             shareURL:"http://localhost/projects/TryonMobile/Build/share.php",
-            twitterHashtag:"VirtualTryOn,Softsol",
+            twitterHashtag:"VirtualTryOn",
             saveImageTitle:"MyTryOnLook.png",
             bordercolor:"#000000",
             fontSize:"10",
