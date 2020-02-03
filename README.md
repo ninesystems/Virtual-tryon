@@ -19,8 +19,8 @@ You can change the design and appearance of Tryon as per your website looks. It'
 
 - [ ] Change the structure, add webpack to complie JS files 
 - [ ] Add PD measurement & frame fitting algorithm
-- [ ] Remove License Screen, previously added when it was a paid software.
+- [x] Remove License Screen, previously added when it was a paid software.
 - [ ] Add a logo so we can grow community
 - [ ] Make easily integrateable like any jquery plugin.
-- [ ] Remove junk files & data.
+- [x] Remove junk files & data.
 - [ ] Make analytics working so people could know which frame has highest hits.
