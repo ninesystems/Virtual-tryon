@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Tryon HTML5 Demo | Softsol Consulting</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <link href="./demo-style.css" type="text/css" media="screen" rel="stylesheet" />
+    <link href="./hint.css" type="text/css" media="screen" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div style="float:left;border:1px solid #000;">
+        <div id="tryonpreview0" class="softsol-tryon"></div>
+        <div id="tryonbar0" class="softsol-tryon-bar"></div>
+    </div>
+
+    <div class="frames" id="frames" style="margin-left:30px;">
+        <ul>
+            <li data="glasses/dkny.png" frameH="1/5"><img src="glasses/dkny-angle.jpg" width="120"></li>
+            <li data="glasses/rayban.png" frameH="1/5"><img src="glasses/rayban-angle.jpg" width="120"></li>
+            <li data="glasses/glass3.png" frameH="1/5"><img src="glasses/glass3.png" width="120"></li>
+            <li data="glasses/oakley.png" frameH="1/4"><img src="glasses/oakley.jpg" width="120"></li>
+
+        </ul>
+    </div>
+
+
+    <script type="text/javascript" src="./dist/bundle.js"></script>
+    <script type="text/javascript" src="./settings.js"></script>
+    <script type="text/javascript">
+
+        /*var tryon = new Tryon();
+        last_tryon = tryon;
+        tryon.initApp(defaultTryon,defaultBar);*/
+    </script>
+
+    <script type="text/javascript">
+        var tryOnActive = 'tryonpreview0';
+        var last_tryon = null;
+        var defaultTryon = 'tryonpreview0';
+        var defaultBar = 'tryonbar0';
+        settings_tryon.currentFrame = "glasses/oakley.png";
+        settings_tryon.tryonActive = "tryonpreview0";
+
+        function showVto(tryonId, barId) {
+            EventListener.dispatch("MULTI_DESTROY", this);
+            settings_tryon.activeTryOn = tryonId;
+            tryOnActive = tryonId;
+
+            if (last_tryon != null) {
+                last_tryon.destroyAll();
+            }
+
+            var tryon = new Tryon();
+            last_tryon = tryon;
+            tryon.initApp(tryonId, barId);
+
+        }
+        window.addEventListener("DOMContentLoaded", (event) => {
+                console.log("DOM fully loaded and parsed");
+                showVto(defaultTryon, defaultBar);
+        });
+            
+        function showalert(event, elem) {
+            return false;
+        }
+
+        var elem = document.getElementsByTagName("li");
+        for (var i = 0; i < elem.length; i++) {
+            elem[i].addEventListener("click", applyFrame);
+        }
+        function applyFrame(evt) {
+            var imageName = evt.currentTarget.getAttribute("data");
+            var framePos = evt.currentTarget.getAttribute("frameH");
+            EventListener.dispatch("APPLY_FRAME", this, imageName, tryOnActive, framePos);
+        }
+    </script>
+</body>
+
+</html>
