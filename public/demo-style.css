@@ -1,3 +1,11 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.tryon-box{
+    border: 1px solid #000;
+}
 .frames{
     float: left;
 }
@@ -49,26 +57,4 @@ cursor: pointer;
 float: left;
 margin: 0px;
 }
-}
-/*label.tool {
-position: absolute;
-bottom: 0px;
-font-size: 9px;
-margin-left: 10%;
-font-family: sans-serif;
-}*/
-.tool {
-position: relative;
-font-size: 10px;
-font-family: sans-serif;
-top:25px;
-}
-label.tool{
-    bottom: 0;
-    font-family: sans-serif;
-    font-size: 9px;
-    left: 45%;
-    margin-left: -60%;
-    position: relative;
-    top: 29px;
 }
