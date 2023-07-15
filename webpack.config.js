@@ -9,8 +9,8 @@ module.exports = {
         path: __dirname +'/public',  // path to output files
         filename: 'dist/bundle.js'
     },
-    // optimization: {
-    //     minimizer: [new UglifyJsPlugin()],
-    // },
-    mode: 'development'
+    optimization: {
+        minimizer: [new UglifyJsPlugin()],
+    },
+    mode: config.mode
 }

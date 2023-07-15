@@ -3,8 +3,6 @@
 onmessage=function (evt) {
 
       console.log('Message received from main script'+evt);
-
-      
       var tracker = new tracking.ObjectTracker([ 'eye']);
       tracker.setStepSize(1.7);
       tracking.track('#previewImage', tracker);

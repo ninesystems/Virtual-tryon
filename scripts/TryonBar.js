@@ -106,9 +106,7 @@ export default function TryonBar(myBarArea){
 			var leftMargin = ((parseInt(settings.panelwidth)+(parseInt(settings.panelborder)*2)) / totalButtons)/2;// - (this.width)/2;
 			var topMargin = (parseInt(settings.panelheight) - this.height)/2;
 			/*strButton='<label for="tryon'+name+'" class="tool">'+text+'</label>';*/
-
-			strButton ='<label id="tryon'+name+'" style="display:block;line-height:1;font-size:'+settings.fontSize+'px; float:left; margin-top:'+topMargin+'px; margin-left:'+leftMargin+'px; overflow:hidden; cursor:pointer; width:'+this.width+'px;height:'+this.height+'px;background-image:url('+imageSrc+');background-position:center top;z-index:9999;background-repeat:no-repeat;"><span class="tool">'+text+'</span></label>'
-			
+			strButton ='<label id="tryon'+name+'" style="display:block;line-height:1;font-size:'+settings.fontSize+'px; float:left; margin-top:'+topMargin+'px; margin-left:'+leftMargin+'px; overflow:hidden; cursor:pointer; width:'+this.width+'px;height:'+this.height+'px;background-image:url('+imageSrc+');background-position:center top;z-index:9999;background-repeat:no-repeat;"><span style="top:25px; position:relative; display:block; text-align:center">'+text+'</span></label>'
 			if(callback){callback(strButton, name)};
 		};
 		img.src = imageSrc;
@@ -126,7 +124,7 @@ export default function TryonBar(myBarArea){
 		}
 	};
 
-	function makeBrowseButton(imageSrc, text,callback){
+	function makeBrowseButton(imageSrc,text,callback){
 		
 		
 		var strButton = '';
@@ -142,9 +140,7 @@ export default function TryonBar(myBarArea){
             var topMargin = (parseInt(settings.panelheight) - this.height)/2;
 
 			if (window.File && window.FileReader && window.FileList && window.Blob) {
-				strButton ='<label style="display:block; float:left;line-height:1; font-size:'+settings.fontSize+'px; margin-top:'+topMargin+'px; margin-left:'+leftMargin+'px; overflow:hidden; cursor:pointer; width:'+this.width+'px;height:'+this.height+'px;background-image:url('+imageSrc+');background-position:center top; background-repeat:no-repeat;"><input type="file" id="tryonbrowse'+'" size="2" style="position:relative;margin:0; cursor:pointer; height:'+(this.height-labelHeight)+'px;width: '+this.width+'px;opacity: 0;-moz-opacity: 0;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" accept="image/*" /><span class="tool"style="top:0px">'+text+'</span></label>'
-			}else{
-				strButton ='<label style="display:block; float:left;line-height:1; margin-top:'+topMargin+'px; margin-left:'+leftMargin+'px; overflow:hidden; cursor:pointer; width:'+this.width+'px;height:'+this.height+'px;background-image:url('+imageSrc+');background-position:center top; background-repeat:no-repeat;"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="'+this.width+'" height="'+this.height+'" id="browsebtn"><param name="loop" value="false"/><param name="movie" value="'+settings.swfpath+'" /><param name="wmode" value="transparent" /><param name="loop" value="false"/><!--[if !IE]>--><object type="application/x-shockwave-flash" data="'+settings.swfpath+'" width="'+this.width+'" height="'+this.height+'" class="" align=""><param name="wmode" value="transparent" /><param name="loop" value="false"/><param name="flashvars" value="" /><!--<![endif]--><!--[if !IE]>--></object><!--<![endif]-->'+text+'</label>'
+				strButton ='<label style="display:block; float:left;line-height:1; font-size:'+settings.fontSize+'px; margin-top:'+topMargin+'px; margin-left:'+leftMargin+'px; overflow:hidden; cursor:pointer; width:'+this.width+'px;height:'+this.height+'px;background-image:url('+imageSrc+');background-position:center top; background-repeat:no-repeat;"><input type="file" id="tryonbrowse'+'" size="2" style="position:relative;margin:0; cursor:pointer; height:'+(this.height-labelHeight)+'px;width: '+this.width+'px;opacity: 0;-moz-opacity: 0;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);" accept="image/*" /><span style="top:25px; display:block; text-align:center">'+text+'</span></label>'
 			}
 			if(callback){callback(strButton, "browse")};
 		};

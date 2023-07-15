@@ -3,9 +3,10 @@
   "version": "1.0.1",
   "description": "Tryon eyeglasses",
   "main": "app.js",
+  "mode":"production",
   "scripts": {
-    "dev": "webpack-dev-server --hot"
-
+    "dev": "webpack-dev-server --hot",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
