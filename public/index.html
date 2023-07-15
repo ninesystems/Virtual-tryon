@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width,user-scalable=no">
     <link href="./demo-style.css" type="text/css" media="screen" rel="stylesheet" />
-    <link href="./hint.css" type="text/css" media="screen" rel="stylesheet" />
+    <link href="./hint.min.css" type="text/css" media="screen" rel="stylesheet" />
 
 </head>
 
@@ -29,13 +29,8 @@
 
     <script type="text/javascript" src="./dist/bundle.js"></script>
     <script type="text/javascript" src="./settings.js"></script>
-    <script type="text/javascript">
-
-        /*var tryon = new Tryon();
-        last_tryon = tryon;
-        tryon.initApp(defaultTryon,defaultBar);*/
-    </script>
-
+    <script type="text/javascript" src="./libs/tracking-min.js"></script>
+    <script type="text/javascript" src="./libs/eye-min.js"></script>
     <script type="text/javascript">
         var tryOnActive = 'tryonpreview0';
         var last_tryon = null;
@@ -53,9 +48,10 @@
                 last_tryon.destroyAll();
             }
 
-            var tryon = new Tryon();
-            last_tryon = tryon;
-            tryon.initApp(tryonId, barId);
+            // var tryon = new Tryon();
+            // last_tryon = tryon;
+            
+            Tryon.initApp(tryonId, barId);
 
         }
         window.addEventListener("DOMContentLoaded", (event) => {

@@ -1,17 +1,20 @@
-var ModelGallery = function(myWorkArea){
-	var previewArea = myWorkArea;
-	var settings = settings_tryon;
-	var _galleryRef = this;
-	var modelArea = null;
-    var leftArrow = null;
-    var rightArrow = null;
-	var modelsVisual = null;
-	var isOpened = false;
-    var isBuilded = false;
-	/*var intID =0;
-	var progress =0;*/
-    var isMobile = navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
-    var buttonsWidth = 0;
+const jsDom = require('./libs/jsDom').default;
+const Dragdealer = require('./libs/dragdealer');
+export default function ModelGallery(myWorkArea){
+	const previewArea = myWorkArea;
+	const settings = settings_tryon;
+	const _galleryRef = this;
+	let modelArea = null;
+    let leftArrow = null;
+    let rightArrow = null;
+	let modelsVisual = null;
+	let isOpened = false;
+    let isBuilded = false;
+    let panelheight = 0;
+	/*let intID =0;
+	let progress =0;*/
+    let isMobile = navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i);
+    let buttonsWidth = 0;
 
 	ModelGallery.prototype.initPlugin = function() {
 		EventListener.addEventListener("AREA_CLICKED", hideModelsIfOpen);
@@ -44,13 +47,13 @@ var ModelGallery = function(myWorkArea){
 
 	function drawGallery() {
 		modelsVisual = jsDom.createNode("ul", {"id":"modelVisual", "class":"handle", "style":"overflow:hidden;margin:0;padding:0;list-style: none;position:relative;left:0px;height: "+(panelheight)+"px;"}, "", "parent", modelArea);
-		var totalModels = settings.modelsimages.split(",");
-		var totalWidth = 0;
-		var imageLoaded = 0;
-		for (var i = 0; i < totalModels.length; i++) {
-			var modelThumburl = totalModels[i].toString().trim();
-			var modelThumb = jsDom.createNode("li", {"id":"modelThumb"+i, "style":"width:auto;height:"+panelheight+"px;cursor:pointer;background-size:25%; float:left;margin-right:5px"}, "", "parent", modelsVisual);
-			var modelimage = jsDom.createNode("img", {"src":modelThumburl, "style":"width:auto;height:"+(panelheight-6)+"px;padding:2px; border:1px solid #d3d3d3;"}, "", "parent", modelThumb);
+		let totalModels = settings.modelsimages.split(",");
+		let totalWidth = 0;
+		let imageLoaded = 0;
+		for (let i = 0; i < totalModels.length; i++) {
+			let modelThumburl = totalModels[i].toString().trim();
+			let modelThumb = jsDom.createNode("li", {"id":"modelThumb"+i, "style":"width:auto;height:"+panelheight+"px;cursor:pointer;background-size:25%; float:left;margin-right:5px"}, "", "parent", modelsVisual);
+			let modelimage = jsDom.createNode("img", {"src":modelThumburl, "style":"width:auto;height:"+(panelheight-6)+"px;padding:2px; border:1px solid #d3d3d3;"}, "", "parent", modelThumb);
 			modelimage.onload = function(){
 				imageLoaded++;
                 if(this.width<=50){
@@ -68,10 +71,10 @@ var ModelGallery = function(myWorkArea){
 	};
 
 	function modelChoosed(evt) {
-		var nodeType = evt.target.nodeName;
-		var currentModel = evt.target || evt.srcElement;
+		let nodeType = evt.target.nodeName;
+		let currentModel = evt.target || evt.srcElement;
 		if(nodeType=="IMG"){
-			var modelURL =  jsDom.getProperty(currentModel, "src");
+			let modelURL =  jsDom.getProperty(currentModel, "src");
 			EventListener.dispatch("MODEL_CHOOSEN", this, modelURL, "");
             //Next line is only for demo//
             EventListener.dispatch("APPLY_FRAME",this,settings_tryon.currentFrame,settings_tryon.tryonActive,"1/5");
@@ -83,9 +86,9 @@ var ModelGallery = function(myWorkArea){
 	function makeStript(totalWidth){
 		jsDom.css(modelsVisual, {"width":totalWidth+"px"});
         isBuilded = true;
-        var step =1;
-	    var totalModels = settings.modelsimages.split(",");
-        var galDrag = new Dragdealer('modelArea', {
+        let step =1;
+	    let totalModels = settings.modelsimages.split(",");
+        let galDrag = new Dragdealer('modelArea', {
                 steps: totalModels.length,
                 speed: 0.3,
                 loose: true,

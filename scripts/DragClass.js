@@ -276,3 +276,5 @@ function dragObject(element, attachElement, lowerBound, upperBound, startCallbac
         event.preventDefault();
     }
 }
+
+export default dragObject;

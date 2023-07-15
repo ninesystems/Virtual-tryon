@@ -1,4 +1,4 @@
-var BTN = (function() {
+var TEA = (function() {
 
     /** privat emethods starts here **/
     var charsToLongs = function(chars){

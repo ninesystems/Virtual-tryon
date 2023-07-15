@@ -1,14 +1,16 @@
-var WebcamToImage = function(playBackArea){
-	var _webcam = this;
-	var _playbackArea = playBackArea;
-	var settings = settings_tryon;
-	var vid =null;
-	var can = null;
-	var camWidth = 400;
-	var camHeight = 300;
-	var isMirror = false;
-	var isEnhancedLight = false;
-    var camInitiated = false;
+const jsDom = require('./libs/jsDom').default;
+export default function WebcamToImage(playBackArea){
+	const _webcam = this;
+	let _playbackArea = playBackArea;
+	let settings = settings_tryon;
+	let vid =null;
+	let can = null;
+	let camWidth = 400;
+	let camHeight = 300;
+	let isMirror = false;
+	let isEnhancedLight = false;
+    let camInitiated = false;
+	let stream = null;
 
 	navigator.getUserMedia = ( navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia);
 	
@@ -39,19 +41,21 @@ var WebcamToImage = function(playBackArea){
         }
 	};
 	function startHtmlCamera(video) {
-		var successCallback = function(stream){
-			stream = stream;
-			if (stream.getVideoTracks().length == 0) {
-                // TODO: Add "noCamFound" as public event.
+		const successCallback = function(_stream){
+			if (_stream.getVideoTracks().length == 0) {
                 EventListener.dispatch("noCamFound", this);
 				closeCam(true);
         		return;
     		}
-			if (window.URL){
-			    video.src = window.URL.createObjectURL(stream);
+
+			video.srcObject = _stream;
+			video.play();
+			/*if (window.URL){
+			    video.src = window.URL.createObjectURL(_stream);
 			}else{
-			    video.src = stream;
-			};
+				video.srcObject = _stream;
+				video.play();
+			};*/
 		    jsDom.css(video, {"display":"block"});
 
 			video.play();

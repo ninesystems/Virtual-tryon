@@ -1,4 +1,7 @@
-var TryonBar = function(myBarArea){
+const jsDom = require('./libs/jsDom').default;
+const ModelGallery = require('./ModelGallery').default;
+
+export default function TryonBar(myBarArea){
 	var barArea = myBarArea;
 	var settings = settings_tryon;
 	var totalButtons = 0;
@@ -97,7 +100,7 @@ var TryonBar = function(myBarArea){
 		var strButton = '';
 		var img = new Image();
 		img.onload = function(){
-			labelHeight = parseInt(settings.fontSize);
+			const labelHeight = parseInt(settings.fontSize);
                 this.width  += labelHeight;
                 this.height  += labelHeight;
 			var leftMargin = ((parseInt(settings.panelwidth)+(parseInt(settings.panelborder)*2)) / totalButtons)/2;// - (this.width)/2;

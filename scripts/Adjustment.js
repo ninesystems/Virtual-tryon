@@ -1,4 +1,6 @@
-var Adjustment = function(myWorkArea){
+const jsDom = require('./libs/jsDom').default;
+const Dragdealer = require('./libs/dragdealer');
+export default function Adjustment(myWorkArea){
 	var barElement = myWorkArea;
 	var settings = settings_tryon;
 	var _adjustmentRef = this;
@@ -160,4 +162,3 @@ var Adjustment = function(myWorkArea){
 	// auto initiate //
 	initPlugin();
 };
-export default Adjustment;

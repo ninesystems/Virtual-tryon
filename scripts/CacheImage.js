@@ -1,9 +1,10 @@
-var CacheImage = function(){
+export default function CacheImage(){
 	var _cache = this;
 	var settings = settings_tryon;
 	var isBrowserStorage = window.localStorage!==undefined?true:false;
 	var storageName = "TryonStore";
 	var frameData = "frameData";
+	var objData = {};
 	
 	// Saving the image here//
 	CacheImage.prototype.saveImage = function(imageData) {

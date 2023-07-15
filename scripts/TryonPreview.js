@@ -1,37 +1,45 @@
-var TryonPreview = function(myWorkArea){
-	var previewArea = myWorkArea;
-	var settings = settings_tryon;
-	var _previewRef = this;
-	var mainArea = null;
-	var webcam = null;
-	var cacheImg = new CacheImage();
-	var previewImage = null;
-	var dragleft=null;
-	var dragright=null;
-	var frameImage =null;
-	var _scaleFactor = 100;
-	var _rotation = 0;
-	var _frameScaleFactor = 100;
-	var _frameRotation =0;
-	var dragImage =null;
-	var dragFrame = null;
-	var leftImage=null;
-	var rightImage=null;
-	var isUserImage = false;
-    var isModel  = false;
-    var frameData = "";
-    var userImageData = "";
-    var cachedImage = false;
-    var cachedData = null;
-    var _isMirror = false;
-    var finalFrame = null;
-    var _modelNumber = 0;
-    var userImg = null;
-    var framemirror='';
-    var cacheframe=" ";
-    var isframe=true;
-    var rect="";
-    var istrack=true;
+const CacheImage = require('./CacheImage').default;
+const jsDom = require('./libs/jsDom').default;
+const Tools = require('./libs/Tools').default;
+const dragObject = require('./DragClass').default;
+const WebcamToImage = require('./WebcamToImage').default;
+
+
+function TryonPreview(myWorkArea){
+	let previewArea = myWorkArea;
+	let settings = settings_tryon;
+	let _previewRef = this;
+	let mainArea = null;
+	let webcam = null;
+	let cacheImg = new CacheImage();
+	let previewImage = null;
+	let dragleft=null;
+	let dragright=null;
+	let frameImage =null;
+	let _scaleFactor = 100;
+	let _rotation = 0;
+	let _frameScaleFactor = 100;
+	let _frameRotation =0;
+	let dragImage =null;
+	let dragFrame = null;
+	let leftImage=null;
+	let rightImage=null;
+	let isUserImage = false;
+    let isModel  = false;
+    let frameData = "";
+    let userImageData = "";
+    let cachedImage = false;
+    let cachedData = null;
+    let _isMirror = false;
+    let finalFrame = null;
+    let _modelNumber = 0;
+    let userImg = null;
+    let framemirror='';
+    let cacheframe=" ";
+    let isframe=true;
+    let rect="";
+    let istrack=true;
+	
     
 
    TryonPreview.prototype.setupLayout = function() {
@@ -104,9 +112,7 @@ var TryonPreview = function(myWorkArea){
             //EventListener.dispatch("ADJUSTMENT_STARTED",this);
 		}else{
 			var data = 'data:image/'+ext+';base64,' + file;
-			
 			loadImageFromData(data);
-
 			cacheImage(data);
 		}
         if(userImg!==null){
@@ -168,7 +174,7 @@ var TryonPreview = function(myWorkArea){
 			if(objImageData.hasOwnProperty("lastused")){
 				if(objImageData.lastused !== "image"){ 
                     cachedImage = false;
-					modelToload = objImageData[objImageData.lastused];
+					const modelToload = objImageData[objImageData.lastused];
 					var arrModels = settings.modelsimages.split(",");
 					imgToLoad = arrModels[modelToload];
 				
@@ -772,3 +778,5 @@ var TryonPreview = function(myWorkArea){
 	// auto initiate //
 	this.setupLayout();
 };
+
+export default TryonPreview;

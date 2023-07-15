@@ -1,7 +1,7 @@
-/**
- * Created by Studio on 20/Nov/14.
- */
-var Resizer = function(myWorkArea){
+const ShareView = require('./ShareView').default;
+const jsDom = require('./libs/jsDom').default;
+
+export default function Resizer(myWorkArea){
     var previewArea = myWorkArea;
     var settings = settings_tryon;
     var _resizerRef = this;
@@ -10,7 +10,7 @@ var Resizer = function(myWorkArea){
     var fRotation=0;
     var frameimg='';
     var mirrorMode=0;
-    var resizerBtn=["FrameReset","FrameRotateLeft","FrameRotateRight","FrameScaleUp","FrameScaleDown","space","FacebookShare","TwitterShare","SaveImage"];
+    var resizerBtn=["FrameReset","FrameRotateLeft","FrameRotateRight","FrameScaleUp","FrameScaleDown","space","SaveImage"];
     var shareObj=new ShareView();
     var frameLeft=0;
     var frameTop=0;
@@ -100,12 +100,6 @@ var Resizer = function(myWorkArea){
       case 'FrameScaleDown':
       fScale -= 10;
       EventListener.dispatch("SCALE_DOWN",this,fScale,fRotation,frameLeft,frameTop);
-      break;
-      case 'FacebookShare':
-      shareObj.savetheImage("fb");  
-      break;
-      case 'TwitterShare':
-      shareObj.savetheImage("tw");
       break;
       case 'SaveImage':
       shareObj.savetheImage("saveonly");

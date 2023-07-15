@@ -1,7 +1,7 @@
 /**
  * Created by Studio on 16/Dec/14.
  */
-var Tools = (function() {
+const Tools = (function() {
     // Private method //
     var getBase64Image = function(img, quality) {
         var canvas = document.createElement("canvas");
@@ -79,5 +79,6 @@ return {
    
 })();
 
+export default Tools;
 
 /*Tools.bar(); //FooStatic.barPrivate() called.*/
