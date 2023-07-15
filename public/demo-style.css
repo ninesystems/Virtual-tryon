@@ -4,7 +4,7 @@ body{
 }
 
 .tryon-box{
-    border: 1px solid #000;
+    border: 1px solid #d2d1d1;
 }
 .frames{
     float: left;
@@ -21,8 +21,14 @@ body{
     border: 1px dotted #d3d3d3;
     border-radius: 5px;
     background-color: white;
-    box-shadow: 2px 2px 2px #d3d3d3;
-    -moz-box-shadow: 2px 2px 2px #d3d3d3;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.frames ul li:hover {
+    border: 1px solid #744ef4;
+    border-radius: 5px;
+    background-color: white;
     cursor: pointer;
 }
 
@@ -51,10 +57,12 @@ height: 50px;
 border: 1px dotted #d3d3d3;
 border-radius: 5px;
 background-color: white;
-box-shadow: 2px 2px 2px #d3d3d3;
--moz-box-shadow: 2px 2px 2px #d3d3d3;
 cursor: pointer;
 float: left;
 margin: 0px;
 }
+}
+
+.bitlizer-tryon-bar{
+    border-top: 1px solid #d2d1d1 
 }
