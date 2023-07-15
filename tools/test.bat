@@ -1,1 +1,0 @@
-CScript /nologo pack.wsf test.js >> test-p.js

@@ -1,0 +1,33 @@
+{
+  "name": "virtual-try-on",
+  "version": "1.0.1",
+  "description": "Tryon eyeglasses",
+  "main": "app.js",
+  "scripts": {
+    "dev": "webpack-dev-server --hot"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ninesystems/Virtual-tryon.git"
+  },
+  "keywords": [
+    "VTO",
+    "Tryon",
+    "Software",
+    "virtual",
+    "tryon"
+  ],
+  "author": "Seth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ninesystems/Virtual-tryon/issues"
+  },
+  "homepage": "https://github.com/ninesystems/Virtual-tryon#readme",
+  "devDependencies": {
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
