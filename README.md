@@ -57,10 +57,10 @@ or
 yarn build
 ```
 
-It will make a dist folder which is your files to run the tryon.
+It will make a public folder which is your files to run the tryon.
 
 ### how to try
-Open the dist folder & run the index.html file in browser, make sure if you can roll index.html from a server, like localhost
+Open the public folder & run the index.html file in browser, make sure if you can roll index.html from a server, like localhost
 
 or use http-server to run the index.html file.
 
@@ -73,7 +73,7 @@ yarn global add http-server
 
 once done run the command (assuming you are in Virtual-tryon folder)
 ``` 
-http-server -p 3000 ./dist -o http://localhost:3000/index.html
+http-server -p 3000 ./public -o http://localhost:3000/index.html
 ```
 
 ### For Developers 
