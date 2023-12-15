@@ -60,6 +60,14 @@ yarn build
 It will make a public folder which is your files to run the tryon.
 
 ### how to try
+Download the released version directly from 
+
+```
+https://github.com/ninesystems/Virtual-tryon/releases/tag/1.0.1
+```
+
+or follow the developer path to setup at local then run build command
+
 Open the public folder & run the index.html file in browser, make sure if you can roll index.html from a server, like localhost
 
 or use http-server to run the index.html file.
