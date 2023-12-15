@@ -1,3 +1,5 @@
+## Congratulations Virtual tryon converted to node.js environment & working with latest browser, removed the flash fallback & many more 
+
 # Virutal-tryon
 A virtual tryon(mirror) script for optical ecommerce
 
@@ -27,12 +29,46 @@ You can change the design and appearance of Tryon as per your website looks. It'
 
 
 ### How to Build
+clone the repo
+```
 
-Run the "build.bat" file it will compose all the code files & will make a fresh "Build" folder.
-All the newly developed code is in Build folder.
+```
+then 
+``` cd Virutal-tryon ```
+then 
+```
+npm install
+
+or
+
+yarn ```
+
+Once done
+
+run the command
+
+``` npm run build
+
+or
+
+yarn build ```
+
+It will make a dist folder which is your files to run the tryon.
 
 ### how to try
-Open the Build folder & run the index.html file in browser.
+Open the dist folder & run the index.html file in browser, make sure if you can roll index.html from a server, like localhost
+
+or use http-server to run the index.html file.
+
+here is the sequence to roll the server
+```
+npm i -g http-server
+or 
+yarn global add http-server
+````
+
+once done run the command (assuming you are in Virtual-tryon folder)
+``` http-server -p 8080 ./dist -o http://localhost:3000/index.html ```
 
 ### Problems & Solutions
 if your build in not running as you want, please feel free to open an issue. i will try to respond you ASAP.
