@@ -1,4 +1,4 @@
-## Congratulations Virtual tryon converted to node.js environment & working with latest browser, removed the flash fallback & many more 
+## 🎉 Congratulations Virtual tryon converted to node.js environment & working with latest browser, removed the flash fallback & many more 🎉
 
 # Virutal-tryon
 A virtual tryon(mirror) script for optical ecommerce
@@ -31,27 +31,31 @@ You can change the design and appearance of Tryon as per your website looks. It'
 ### How to Build
 clone the repo
 ```
-
+git clone https://github.com/ninesystems/Virtual-tryon
 ```
 then 
 ``` cd Virutal-tryon ```
 then 
+
 ```
 npm install
 
 or
 
-yarn ```
+yarn
+```
 
 Once done
 
 run the command
 
-``` npm run build
+```
+npm run build
 
 or
 
-yarn build ```
+yarn build
+```
 
 It will make a dist folder which is your files to run the tryon.
 
@@ -68,13 +72,31 @@ yarn global add http-server
 ````
 
 once done run the command (assuming you are in Virtual-tryon folder)
-``` http-server -p 8080 ./dist -o http://localhost:3000/index.html ```
+``` 
+http-server -p 3000 ./dist -o http://localhost:3000/index.html
+```
+
+### For Developers 
+```
+npm run dev
+or
+yarn dev
+```
+the above command will roll the server & you can start making changes to tryon.
+
+### Settings options
+
+there is a ``` settings.js ``` file in ``` assets/js ``` folder, feel free to edit that as thats selef explainatory.
+will add some docuement on those settings soon.
 
 ### Problems & Solutions
 if your build in not running as you want, please feel free to open an issue. i will try to respond you ASAP.
 
 ### Marketing & Help
 If possible please help me to promote this virtual tryon, I am continously working with development from now. i would be happy if you join my hand to promote this so maximum people can take benefit of this piece of code without paying a single panny.
+
+### We are looking for contributors
+if you know how to make wordpress or magento or shopify modules, you can contribute to this repo, we are planing to launch these modules, so the optician community can launch their ecommerce easily & quickly.
 
 ## this tryon is sponcered by [NineSystems](https://ninesystems.in)
 NineSystems is a company working with engineering in Optical vision, IoT devices & Cloud Infra.
